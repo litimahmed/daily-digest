@@ -43,6 +43,9 @@ import AdminTermsAndConditionsCreate from "./pages/admin/TermsAndConditionsCreat
 import AdminCategoryList from "./pages/admin/CategoryList";
 import AdminCategoryCreate from "./pages/admin/CategoryCreate";
 import AdminCategoryEdit from "./pages/admin/CategoryEdit";
+import AdminServiceList from "./pages/admin/ServiceList";
+import AdminServiceCreate from "./pages/admin/ServiceCreate";
+import AdminServiceEdit from "./pages/admin/ServiceEdit";
 
 const queryClient = new QueryClient();
 
@@ -83,6 +86,9 @@ const App = () => (
           <Route path="/admin/categories" element={<ProtectedRoute><AdminCategoryList /></ProtectedRoute>} />
           <Route path="/admin/categories/create" element={<ProtectedRoute><AdminCategoryCreate /></ProtectedRoute>} />
           <Route path="/admin/categories/edit/:id" element={<ProtectedRoute><AdminCategoryEdit /></ProtectedRoute>} />
+          <Route path="/admin/services" element={<ProtectedRoute><AdminServiceList /></ProtectedRoute>} />
+          <Route path="/admin/services/create" element={<ProtectedRoute><AdminServiceCreate /></ProtectedRoute>} />
+          <Route path="/admin/services/edit/:id" element={<ProtectedRoute><AdminServiceEdit /></ProtectedRoute>} />
           
           <Route path="*" element={<NotFound />} />
         </Routes>
